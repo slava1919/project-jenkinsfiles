@@ -3,19 +3,19 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-        options {
+    options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
     stages {
         stage("First step") {
             steps {
-                sh 'ssh nod@nod \'hostname\''
+                sh 'ssh root@ub1 \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh nod@nod \'uptime\''
+                sh 'ssh root@ub1 \'uptime\''
             }
         }
     }
