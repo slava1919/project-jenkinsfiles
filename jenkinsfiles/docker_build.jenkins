@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                         sh 'docker build -t slava121/toolbox:latest . '
+                         sh 'docker build -t slava121/toolbox:1.1 . '
                 }         
             }
         } 
